@@ -37,4 +37,4 @@ const updateTask = async (id, task) => {
   return updatedTask;
 };
 
-export { getAll, createTask, deleteTask, updateTask };
+export default { getAll, createTask, deleteTask, updateTask };

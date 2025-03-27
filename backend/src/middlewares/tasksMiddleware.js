@@ -23,4 +23,4 @@ const validateFieldStatus = (req, res, next) => {
   next();
 };
 
-export { validateFieldTitle, validateFieldStatus };
+export default { validateFieldTitle, validateFieldStatus };

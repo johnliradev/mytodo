@@ -19,4 +19,4 @@ const updateTask = async (req, res) => {
   return res.status(204).json("message: Updated");
 };
 
-export { getAll, createTask, deleteTask, updateTask };
+export default { getAll, createTask, deleteTask, updateTask };

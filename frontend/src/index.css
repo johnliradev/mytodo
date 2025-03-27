@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@layer components {
+  .button {
+    @apply font-medium   cursor-pointer;
+  }
+  .button.main {
+    @apply bg-[#334977]  w-56 text-white  px-7 py-1 flex gap-5 items-center rounded-lg;
+  }
+  .button.alternative {
+    @apply bg-[#202D48]  w-40 text-white  px-7 py-1  items-center rounded-lg;
+  }
+  .button.profile {
+    @apply bg-[#202D48] w-12 h-12 rounded-full flex items-center justify-center;
+  }
+  .dot {
+    @apply w-4 h-4 bg-red-500 rounded-full;
+  }
+  .icon.default {
+    @apply w-5 h-5;
+  }
+  .overview {
+    @apply bg-white h-screen m-3 rounded-lg;
+  }
+  .breadcrums.nav {
+    @apply flex gap-5 items-center  py-5;
+  }
+  .breadcrums.items {
+    @apply text-[#707070] rounded-md px-2 cursor-pointer;
+  }
+  .breadcrums.items:hover {
+    @apply text-black bg-[#707070]/20 transition-all duration-300;
+  }
+  .breadcrums.items.set {
+    @apply text-black bg-[#707070]/20 rounded-md px-2 cursor-pointer;
+  }
+  .hr-dashboard {
+    @apply w-[90%] m-auto text-[#707070] mb-5;
+  }
+  .overview-tasks {
+    @apply grid grid-cols-3 gap-3;
+  }
+  .list-tasks {
+    @apply bg-[#F2F6FF] h-screen;
+  }
+}

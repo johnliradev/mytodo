@@ -6,15 +6,11 @@ const router = express.Router();
 
 router.get("/", (req, res) => res.send("Main route"));
 router.get("/tasks", tasksController.getAll);
-router.post(
-  "/tasks",
-  tasksMiddleware.validateFieldTitle,
-  tasksController.createTask,
-);
+router.post("/tasks", tasksMiddleware.validateTask, tasksController.createTask);
 router.delete("/tasks/:id", tasksController.deleteTask);
 router.put(
   "/tasks/:id",
-  tasksMiddleware.validateFieldTitle,
+  tasksMiddleware.validateTask,
   tasksMiddleware.validateFieldStatus,
   tasksController.updateTask,
 );

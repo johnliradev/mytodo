@@ -1,4 +1,4 @@
-const validateFieldTitle = (req, res, next) => {
+const validateTask = (req, res, next) => {
   const { body } = req;
   if (body.title === undefined) {
     return res.status(400).json({ message: 'The field "title" is required' });
@@ -6,6 +6,13 @@ const validateFieldTitle = (req, res, next) => {
 
   if (body.title === "") {
     return res.status(400).json({ message: "title cannot be empty" });
+  }
+  if (body.content === undefined) {
+    return res.status(400).json({ message: 'The field "content" is required' });
+  }
+
+  if (body.content === "") {
+    return res.status(400).json({ message: "content cannot be empty" });
   }
   next();
 };
@@ -23,4 +30,4 @@ const validateFieldStatus = (req, res, next) => {
   next();
 };
 
-export default { validateFieldTitle, validateFieldStatus };
+export default { validateTask, validateFieldStatus };
